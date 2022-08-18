@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+.section {
+  background-image: url("../img/background.jpg");
+  vertical-align: middle;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+}
+/* ===========================
+tab wrapper
+============================== */
+.tabs-wrapper {
+  background-color: rgba(17, 17, 17, 0.8);
+  padding: 10px 0;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+.tabs-wrapper ul {
+  display: flex;
+  justify-content: space-between;
+}
+.tabs-wrapper ul li {
+  display: flex;
+  list-style: none;
+  flex-basis: 25%;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+}
+.tabs-wrapper ul li img {
+  width: auto;
+  height: 35px;
+  margin-right: 10px;
+}
+.tabs-wrapper ul li .info {
+  width: 50%;
+  color: #ffffff;
+  font-family: "Poppins";
+}
+.tabs-wrapper ul li::after{
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -4px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+}
+.tabs-wrapper ul li:hover::after, .section .tabs-wrapper ul li.active::after{
+  bottom: -10px;
+}
+.tabs-wrapper ul li::before {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  top: -10px;
+  background-color: #ffb606;
+  display: inline-block;
+}
+.tabs-wrapper ul li:hover::before,
+.section .tabs-wrapper ul li.active::before{
+  width: 100%;
+}
+.tabs-wrapper ul li:hover .info,
+.section .tabs-wrapper ul li.active .info {
+  color: #ffb606;
+}
+.tabs-wrapper ul li .info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.tabs-wrapper ul li .info p {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+/* ===========================
+tab contant
+============================== */
+
+.tabs-contant {
+  background-color: #ffffff;
+  padding: 45px 20px;
+  border-radius: 0 0 5px 5px;
+}
+.tabs-contant > div{
+  display: grid;
+  gap: 45px;
+  grid-template-columns: 300px 300px 300px;
+  justify-content: center;
+}
+.tabs-contant .item img{
+  max-width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.tabs-contant .item{
+  position: relative;
+}
+.tabs-contant .item span{
+  background-color: #ffb606;
+  color: #000000;
+  padding: 10px;
+  position: absolute;
+  bottom: 35px;
+  left: 45%;
+  font-weight: 600;
+}
+
+.tabs-contant .item h3{
+  font-weight: 500;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.tabs-contant .content{
+  display: none;
+}
+
+.tabs-contant .show{
+  display: grid;
+}
