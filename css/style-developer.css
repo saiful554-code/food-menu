@@ -3,10 +3,13 @@
   padding: 0;
   font-family: 'Poppins';
 }
+body{
+  height: 100%;
+}
 .section {
-  background-image: url("../img/background.jpg");
-  vertical-align: middle;
-  height: 100vh;
+  background: url("../img/background.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
   align-items: center;
   display: flex;
 }
@@ -16,6 +19,126 @@
   margin: 0 auto;
   width: 80%;
 }
+/* =================================
+top section tabs
+===================================== */
+.section-1{
+  min-height: 800px;
+  display: flex;
+  /* align-items: center; */
+}
+.section-1 .container{
+  width: 90%;
+  margin-top: 50px;
+}
+.section-1 .container .col-1{
+  width: 40%;
+  background: #E3E9EE;
+  border-radius: 8px;
+}
+.section-1 .container .col-2{
+  flex-basis: 50%;
+  width: 50%;
+}
+.section-1 .container .col-1 .tab-title ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+  z-index: 5;
+  position: relative;
+}
+.section-1 .container .col-1 .tab-title ul span{
+  position: absolute;
+  right: 25px;
+  top: -40px;
+  background: #f0e2c1;
+  padding: 2px 10px;
+  font-weight: 400;
+  font-size: 12px;
+  border-radius: 50px;
+}
+.section-1 .container .col-1 .tab-title ul span::after{
+  content: "";
+  right: 20px;
+  top: 20px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid #f0e2c1;
+}
+.section-1 .container .col-1 .tab-title ul li{
+  width: 33.33%;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+  font-size: 18px;
+}
+.section-1 .container .col-1 .tab-title ul li:hover, .section-1 .container .col-1 .tab-title ul li.on{
+  background: #fd4766;
+  color: #ffffff;
+}
+
+/* =================================
+top section tabs contant
+===================================== */
+
+.tab-content .info{
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+  box-shadow: 5px 5px 10px 0px #D1D9E6;
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+  border-radius: 0 0 8px 8px;
+}
+.tab-content .info h3{
+  max-width: 80%;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.tab-content .info p{
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 80%;
+  color: #3c3e41;
+}
+.tab-content .info .price{
+  background: #fd4766;
+  padding: 10px 20px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 8px;
+  position: absolute;
+  top: 25px;
+  font-size: 18px;
+  box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+  right: 25px;
+}
+.tab-content .info ul{
+  margin-top: 20px;
+}
+.tab-content .info ul li{
+  list-style: none;
+  color: #3c3e41;
+  margin-top: 14px;
+}
+.tab-content .info{
+  display: none;
+}
+.tab-content .visible{
+  display: block;
+}
+
+
 /* ===========================
 tab wrapper
 ============================== */
@@ -47,6 +170,7 @@ tab wrapper
   width: 50%;
   color: #ffffff;
   font-family: "Poppins";
+  transition: all 0.3s ease-in-out;
 }
 .tabs-wrapper ul li::after{
   content: "";
@@ -59,6 +183,7 @@ tab wrapper
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 8px solid #fff;
+  transition: all 0.3s ease-in-out;
 }
 .tabs-wrapper ul li:hover::after, .section .tabs-wrapper ul li.active::after{
   bottom: -10px;
@@ -71,6 +196,7 @@ tab wrapper
   top: -10px;
   background-color: #ffb606;
   display: inline-block;
+  transition: all 0.3s ease-in-out;
 }
 .tabs-wrapper ul li:hover::before,
 .section .tabs-wrapper ul li.active::before{

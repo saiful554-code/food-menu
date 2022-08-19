@@ -1,5 +1,28 @@
-const contents = document.querySelectorAll('.content')
-const listItems = document.querySelectorAll('ul li')
+// For top section
+const listOpts = document.querySelectorAll('.col-1 .tab-title ul li')
+const contants = document.querySelectorAll('.col-1 .tab-content .info')
+
+listOpts.forEach((opt, idx) => {
+  opt.addEventListener('click', () => {
+    hideAllContants()
+    hideAllOpts()
+
+    opt.classList.add('on')
+    contants[idx].classList.add('visible')
+  })
+})
+
+function hideAllContants() {
+  contants.forEach(contant => contant.classList.remove('visible'))
+}
+function hideAllOpts() {
+  listOpts.forEach(opt => opt.classList.remove('on'))
+}
+
+
+// For food menu
+const contents = document.querySelectorAll('.tabs-contant .content')
+const listItems = document.querySelectorAll('.tabs-wrapper ul li')
 
 listItems.forEach((item, idx) => {
   item.addEventListener('click', () => {
