@@ -329,3 +329,11 @@ Animation
     width: 0;
   }
 }
+
+.block{
+  display: grid;
+}
+
+.food-menu{
+  display: none;
+}

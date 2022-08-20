@@ -1,6 +1,7 @@
 // For top section
 const listOpts = document.querySelectorAll('.col-1 .tab-title ul li')
 const contants = document.querySelectorAll('.col-1 .tab-content .info')
+var menu = document.getElementById('preview2')
 
 listOpts.forEach((opt, idx) => {
   opt.addEventListener('click', () => {
