@@ -13,14 +13,17 @@ html{
   background: url("../img/background.jpg") no-repeat center;
   background-size: cover;
   min-height: 100vh;
-  align-items: center;
-  display: flex;
+}
+.section{
+  display: none;
+}
+.section.watch{
+  display: block;
 }
 .container {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   width: 80%;
+  padding-top: 50px;
 }
 /* =================================
 top section tabs
@@ -42,13 +45,22 @@ top section tabs
 }
 .section-1 .container .col-2{
   display: flex;
-  justify-content: center;
-  position: relative;
+  margin-left: 50px;
+  align-items: flex-start;
+  flex-direction: column;
   width: 60%;
+  position: relative;
+}
+.col-2 .thumbnail{
+  display: none;
+}
+.col-2 .thumbnail.open{
+  display: block;
 }
 .section-1 .container .col-2 .thumbnail{
   height: 340px;
   cursor: pointer;
+  position: relative;
 }
 .section-1 .container .col-2 .thumbnail img{
   max-width: 600px;
@@ -57,7 +69,7 @@ top section tabs
 }
 .section-1 .container .col-2 .thumbnail span{
   position: absolute;
-  top: 15%;
+  top: 30%;
   left: 40%;
   z-index: 5;
   padding: 50px 18px;
@@ -185,6 +197,7 @@ tab wrapper
 .tabs-wrapper ul {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .tabs-wrapper ul li {
   display: flex;
@@ -257,7 +270,6 @@ tab wrapper
 /* ===========================
 tab contant
 ============================== */
-
 .tabs-contant {
   background-color: #ffffff;
   padding: 45px 20px;
@@ -330,10 +342,3 @@ Animation
   }
 }
 
-.block{
-  display: grid;
-}
-
-.food-menu{
-  display: none;
-}
