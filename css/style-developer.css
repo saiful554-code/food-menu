@@ -8,12 +8,13 @@ body{
 }
 html{
   scroll-behavior: smooth;
+  font-size: 15px;
 }
 .section {
   background: url("../img/background.jpg") no-repeat center;
   background-size: cover;
-  height: 625px;
-  max-height: 630px;
+  height: 100vh;
+  max-height: 100vh;
 }
 .section{
   display: none;
@@ -134,7 +135,7 @@ top section tabs
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 .section-1 .container .col-1 .tab-title ul li:hover, .section-1 .container .col-1 .tab-title ul li.on{
   background: #fd4766;
@@ -155,7 +156,8 @@ top section tabs contant
 }
 .tab-content .info h3{
   max-width: 80%;
-  font-size: 25px;
+  font-size: 2rem;
+  padding-right: 90px;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -184,6 +186,7 @@ top section tabs contant
 }
 .tab-content .info ul li{
   list-style: none;
+  font-size: 1.2rem;
   color: #3c3e41;
   margin-top: 14px;
 }
@@ -207,7 +210,6 @@ tab wrapper
 .tabs-wrapper ul {
   display: flex;
   justify-content: space-between;
-  position: relative;
 }
 .tabs-wrapper ul li {
   display: flex;
@@ -220,7 +222,7 @@ tab wrapper
 }
 .tabs-wrapper ul li img {
   width: auto;
-  height: 35px;
+  height: 2rem;
   margin-right: 10px;
 }
 .tabs-wrapper ul li .info {
@@ -265,16 +267,14 @@ tab wrapper
   color: #ffb606;
 }
 .tabs-wrapper ul li .info h4 {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 700;
-  text-align: left;
   text-transform: uppercase;
-  margin-bottom: 5px;
 }
 .tabs-wrapper ul li .info p {
-  font-size: 12px;
+  font-size: 0.8em;
   font-weight: 400;
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 /* ===========================
@@ -287,12 +287,12 @@ tab contant
 }
 .tabs-contant > div{
   display: grid;
-  gap: 45px;
-  grid-template-columns: 300px 300px 300px;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
 }
 .tabs-contant .item img{
-  max-width: 100%;
+  width: 100%;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -352,7 +352,13 @@ Animation
   }
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) and (min-height: 600px){
+  html{
+    font-size: 12px;
+  }
+  .tabs-contant > div{
+    grid-template-columns: repeat(2, 1fr);
+  }
   .section-1 .container{
     flex-wrap: wrap;
   }
@@ -362,5 +368,26 @@ Animation
   }
   .section-1 .container .col-2{
     flex-basis: 100%;
+  }
+}
+@media only screen and (max-width: 550px) and (min-height: 300px){
+  html{
+    font-size: 10px;
+  }
+  .tabs-wrapper ul li .info h4{
+    text-align: center;
+  }
+  .tabs-wrapper ul li .info p{
+    text-align: center;
+    display: none;
+  }
+  .tabs-wrapper ul li .info{
+    text-align: center;
+  }
+  .tabs-wrapper ul li img{
+    display: none;
+  }
+  .tabs-contant > div{
+    grid-template-columns: repeat(1, 1fr);
   }
 }
