@@ -27,7 +27,81 @@ html{
   width: 80%;
   padding-top: 50px;
 }
+
+
+
 /* =================================
+Contact form
+===================================== */
+.container-section{
+  background: #E3E9EE;
+  padding: 50px 0;
+}
+.container-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: auto;
+  background: #fff;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 30px;
+  flex-direction: column;
+  box-shadow: 5px 5px 10px 0px #D1D9E6;
+}
+.container-box h6{
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #3c3e41;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+form input, form textarea{
+  padding: 10px;
+  border: 2px solid #868c96;
+  outline: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+form input:focus, form textarea:focus{
+  border: 2px solid #fd4766;
+}
+form button{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 0;
+  border-radius: 5px;
+  background: #fd4766;
+  transition: all 0.3s ease-in-out;
+}
+form button:hover{
+  background: #ff5b76;
+}
+
+.contact-btn{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+.contact-btn a i{
+  padding: 15px 13px;
+  color: #fff;
+  border-radius: 50%;
+  background: #fd4766;
+  cursor: pointer;
+}
+
+
+/* ===========rgb(255, 138, 157)===============
 top section tabs
 ===================================== */
 .section-1{
