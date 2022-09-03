@@ -13,8 +13,8 @@ html{
 .section {
   background: url("../img/background.jpg") no-repeat center;
   background-size: cover;
-  height: 100vh;
-  max-height: 100vh;
+  height: 100%;
+  padding: 50px 0;
 }
 .section{
   display: none;
@@ -357,7 +357,7 @@ Animation
     font-size: 12px;
   }
   .tabs-contant > div{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .section-1 .container{
     flex-wrap: wrap;
@@ -368,11 +368,20 @@ Animation
   }
   .section-1 .container .col-2{
     flex-basis: 100%;
+    justify-content: center;
+    padding: 50px 0;
+    margin: 0;
+  }
+  .section-1 .container .col-2 .thumbnail{
+    margin: 0 auto;
   }
 }
 @media only screen and (max-width: 550px) and (min-height: 300px){
   html{
     font-size: 10px;
+  }
+  .tabs-wrapper ul li{
+    padding: 5px 0;
   }
   .tabs-wrapper ul li .info h4{
     text-align: center;
@@ -386,6 +395,19 @@ Animation
   }
   .tabs-wrapper ul li img{
     display: none;
+  }
+  .section-1 .container .col-2{
+    flex-basis: 100%;
+    justify-content: center;
+    padding: 20px 0;
+    margin: 0;
+  }
+  .section-1 .container .col-2 .thumbnail{
+    margin: 0 auto;
+    height: auto;
+  }
+  .section-1 .container .col-2 .thumbnail video{
+    width: 350px;
   }
   .tabs-contant > div{
     grid-template-columns: repeat(1, 1fr);
