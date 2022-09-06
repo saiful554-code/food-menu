@@ -31,25 +31,77 @@ function hideAllOpts() {
   listOpts.forEach(opt => opt.classList.remove('on'))
 }
 
+/*=============================================
+===========only for food menu 01===============
+===============================================*/
 
-// For food menu
-const contents = document.querySelectorAll('.tabs-contant .content')
-const listItems = document.querySelectorAll('.tabs-wrapper ul li')
+const content1s = document.querySelectorAll('#food-menu-01 .container .tabs-contant .content')
+const listItem1s = document.querySelectorAll('#food-menu-01 .container .tabs-wrapper ul li')
 
-listItems.forEach((item, idx) => {
+listItem1s.forEach((item, idx) => {
   item.addEventListener('click', () => {
-    hideAllContents()
-    hideAllItems()
+    hideAllContent1s()
+    hideAllItem1s()
 
     item.classList.add('active')
-    contents[idx].classList.add('show')
+    content1s[idx].classList.add('show')
   })
 })
 
-function hideAllContents() {
-  contents.forEach(content => content.classList.remove('show'))
+function hideAllContent1s() {
+  content1s.forEach(content => content.classList.remove('show'))
 }
 
-function hideAllItems() {
-  listItems.forEach(item => item.classList.remove('active'))
+function hideAllItem1s() {
+  listItem1s.forEach(item => item.classList.remove('active'))
+}
+
+/*=============================================
+===========only for food menu 02===============
+===============================================*/
+
+const content2s = document.querySelectorAll('#food-menu-02 .container .tabs-contant .content')
+const listItem2s = document.querySelectorAll('#food-menu-02 .container .tabs-wrapper ul li')
+
+listItem2s.forEach((item, idx) => {
+  item.addEventListener('click', () => {
+    hideAllContent2s()
+    hideAllItem2s()
+
+    item.classList.add('active')
+    content2s[idx].classList.add('show')
+  })
+})
+
+function hideAllContent2s() {
+  content2s.forEach(content => content.classList.remove('show'))
+}
+
+function hideAllItem2s() {
+  listItem2s.forEach(item => item.classList.remove('active'))
+}
+
+/*=============================================
+===========only for food menu 03===============
+===============================================*/
+
+const content3s = document.querySelectorAll('#food-menu-03 .container .tabs-contant .content')
+const listItem3s = document.querySelectorAll('#food-menu-03 .container .tabs-wrapper ul li')
+
+listItem3s.forEach((item, idx) => {
+  item.addEventListener('click', () => {
+    hideAllContent3s()
+    hideAllItem3s()
+
+    item.classList.add('active')
+    content3s[idx].classList.add('show')
+  })
+})
+
+function hideAllContent3s() {
+  content3s.forEach(content => content.classList.remove('show'))
+}
+
+function hideAllItem3s() {
+  listItem3s.forEach(item => item.classList.remove('active'))
 }
